@@ -13,6 +13,10 @@ const Home = () => {
   const tempData = [];
 
   useEffect(() => {
+    if (data.length <= 11) {
+      setDatas(data);
+      return;
+    }
     const endInd = page * 10;
     const startInd = endInd - 10;
 
